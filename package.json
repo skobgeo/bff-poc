@@ -2,16 +2,12 @@
   "name": "bff-poc",
   "version": "1.0.0",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
+  "workspaces": ["apps/*", "packages/*"],
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
     "format": "biome format --write .",
     "lint": "biome check .",
-    "lint:fix": "biome check --apply .",
     "test": "turbo run test",
     "clean": "turbo run clean"
   },

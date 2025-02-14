@@ -16,7 +16,8 @@
       "style": {
         "useConst": "error"
       }
-    }
+    },
+    "ignore": ["**/dist/**", "**/build/**", "**/.next/**"]
   },
   "formatter": {
     "enabled": true,
@@ -28,7 +29,7 @@
   "javascript": {
     "formatter": {
       "quoteStyle": "single",
-      "trailingComma": "es5",
+      "trailingCommas": "es5",
       "semicolons": "always"
     }
   }
