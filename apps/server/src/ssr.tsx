@@ -2,7 +2,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import type { FastifyInstance } from 'fastify';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
-import { StaticRouter } from 'react-router-dom/server';
+import { StaticRouter } from 'react-router-dom/server.js';
 import App from '../../client/src/App.js';
 
 export function setupSSR(fastify: FastifyInstance) {
@@ -40,14 +40,14 @@ export function setupSSR(fastify: FastifyInstance) {
       <html>
         <head>
           <title>BFF POC - SSR Example</title>
-          <link rel="stylesheet" href="/assets/index.css">
+          <link rel="stylesheet" href="/index.css">
           <script>
             window.__INITIAL_DATA__ = ${dehydratedState};
           </script>
         </head>
         <body>
           <div id="root">${html}</div>
-          <script type="module" src="/assets/index.js"></script>
+          <script type="module" src="/index.js"></script>
         </body>
       </html>
     `);
